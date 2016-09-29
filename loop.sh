@@ -1,4 +1,8 @@
 #!/bin/sh
+<<<<<<< HEAD
+=======
+Version="1.1"
+>>>>>>> 49816853e925183eb73fc4f36f5918c8130fcecd
    BINDIR="$(dirname "\$(readlink -fn "\$0")")"
    cd "$BINDIR"
    while true
