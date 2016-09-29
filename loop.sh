@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Version="1.1"
+echo "Démarage du script Version:$2"
 
    BINDIR="$(dirname "\$(readlink -fn "\$0")")"
    cd "$BINDIR"

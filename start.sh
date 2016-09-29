@@ -2,7 +2,7 @@
 Version="1.1"
 ScreenName="mine.off"
 Jar="craftbukkit-1.8-R0.1.jar"
-
+#source="system.cfg"
 condition()
 {
 	case $1 in
@@ -27,4 +27,4 @@ condition()
 condition $1
 
 
-	screen -dmSL $ScreenName ./loop.sh $Jar
+	screen -dmSL $ScreenName ./loop.sh $Jar $Version
