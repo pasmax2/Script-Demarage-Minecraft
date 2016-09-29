@@ -2,7 +2,7 @@
 Version="1.1"
 ScreenName="mine.off"
 Jar="craftbukkit-1.8-R0.1.jar"
-#source="system.cfg"
+#source="system.cfg" #Faire en sorte que le fichier sois automatiquement installer
 condition()
 {
 	case $1 in
