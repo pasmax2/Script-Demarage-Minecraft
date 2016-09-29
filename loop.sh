@@ -1,4 +1,5 @@
 #!/bin/sh
+Version="1.0"
    BINDIR="$(dirname "\$(readlink -fn "\$0")")"
    cd "$BINDIR"
    while true
