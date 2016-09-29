@@ -1,5 +1,5 @@
 #!/bin/sh
-
+Version="1.0"
 ScreenName="mine.off"
 Jar="craftbukkit-1.8-R0.1.jar"
 
