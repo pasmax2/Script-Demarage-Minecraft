@@ -27,4 +27,4 @@ condition()
 condition $1
 
 
-	screen -dmSL $ScreenName ./loop.sh $Jar
+	screen -dmSL $ScreenName ./loop.sh $Jar $Version
