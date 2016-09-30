@@ -8,9 +8,8 @@ if [ -e $PWD/systeme.conf ]; then
 else
     read -p "Entré le ScreenName : " ScreenName
     read -p "Entré le fichier Jar : " Jar
-    echo "ScreenName=$ScreenName" > $PWD/systeme.conf
-    echo "Jar=$Jar" >> $PWD/systeme.conf
-    source=$PWD/systeme.conf
+    echo "ScreenName=\"$ScreenName\"" > $PWD/systeme.conf
+    echo "Jar=\"$Jar\"" >> $PWD/systeme.conf
 fi
 
 condition()
