@@ -12,6 +12,7 @@ else
     read -p "Entré le fichier Jar : " Jar
     echo "ScreenName='$ScreenName'" > $PWD/systeme.conf
     echo "Jar='craftbukkit-1.8-R0.1.jar'" >> $PWD/systeme.conf
+    source="$PWD/systeme.conf"
 }
 condition()
 {
