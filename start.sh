@@ -4,13 +4,13 @@ Version="1.1"
 # Jar="craftbukkit-1.8-R0.1.jar"
 
 if [ -e $PWD/systeme.conf ]; then
-    source="$PWD/systeme.conf" #Faire en sorte que le fichier sois automatiquement installer
+    source=$PWD/systeme.conf #Faire en sorte que le fichier sois automatiquement installer
 else
     read -p "Entré le ScreenName : " ScreenName
     read -p "Entré le fichier Jar : " Jar
-    echo "ScreenName='$ScreenName'" > $PWD/systeme.conf
-    echo "Jar='craftbukkit-1.8-R0.1.jar'" >> $PWD/systeme.conf
-    source="$PWD/systeme.conf"
+    echo "ScreenName=$ScreenName" > $PWD/systeme.conf
+    echo "Jar=$Jar" >> $PWD/systeme.conf
+    source=$PWD/systeme.conf
 fi
 
 condition()
