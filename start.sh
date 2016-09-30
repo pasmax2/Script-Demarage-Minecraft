@@ -56,4 +56,4 @@ echo "Démarage du script Version:$2"
 condition $1
 
 
-	screen -dmSL $ScreenName ./loop.sh $Jar $Version
+	screen -dmSL $ScreenName loop $Jar $Version
