@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 Version="1.1"
 # ScreenName="mine.off"
 # Jar="craftbukkit-1.8-R0.1.jar"
@@ -23,6 +23,7 @@ function condition()
 	stop)
 		if ! screen -list | grep -q $2; then
 		  echo -e "\033[31mUn screen n'es pas actif vous devez le démaré avant!"
+          source /etc/profile
 		  exit 0
 		else
 			screen -r -S $2 -X quit
@@ -36,6 +37,7 @@ function condition()
 		
 	if screen -list | grep -q $2; then
 	  echo -e "\033[31mUn screen est déjà actif vous devez le quitter avant!"
+      source /etc/profile
 	  exit 0
 	fi
 }
