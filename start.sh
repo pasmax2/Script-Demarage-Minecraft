@@ -8,7 +8,9 @@ if [ $Version = $VersionGit ]; then
 	echo "[X-C4 - UPDATE] Votre systeme est à jour"
 else
 	echo "[X-C4 - UPDATE] Une mise à jour est disponible"
-	
+	echo "[X-C4 - DOWNLOAD] Téléchargement du fichier update en cours"
+    wget -q $UpdateURL -N
+    bash $PWD/update.sh
 fi
 rm Version.git
 exit 0
