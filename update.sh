@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Mise � jour du systeme en cours"
+echo "Mise à jour du système en cours"
