@@ -1,7 +1,25 @@
 #!/bin/bash
-Version="1.1"
-# ScreenName="mine.off"
-# Jar="craftbukkit-1.8-R0.1.jar"
+Version=1.1
+VersionURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/Version.git
+UpdateURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/update.sh
+wget -q $VersionURL -N
+source $PWD/Version.git
+if [ $Version = $VersionGit ]; then
+	echo "[X-C4 - UPDATE] Votre systeme est à jour"
+else
+	echo "[X-C4 - UPDATE] Une mise à jour est disponible"
+	
+fi
+rm Version.git
+exit 0
+
+function update()
+{
+	echo $Version
+	exit 0
+}
+update
+
 
 if [ -e $PWD/systeme.conf ]; then
     echo "Chargement du fichier de configuration"
