@@ -6,6 +6,12 @@ wget -q $VersionURL -N
 source $PWD/Version.git
 if [ $Version = $VersionGit ]; then
 	echo "[X-C4 - SYSTÈME:008] Votre systeme est à jour"
+    if [ -e $PWD/update.sh ]; then
+        rm $PWD/update.sh
+    fi
+    if [ -e $PWD/Version.git ]; then
+        rm $PWD/Version.git
+    fi
 else
 	echo "[X-C4 - SYSTÈME:010] Une mise à jour est disponible"
 	echo "[X-C4 - SYSTÈME:011] Téléchargement du fichier update en cours"
@@ -14,8 +20,6 @@ else
     source $PWD/update.sh
     echo "[X-C4 - SYSTÈME:015] Suppression du systeme d'upgrade"
 fi
-rm $PWD/update.sh
-rm Version.git
 exit 0
 
 function update()
