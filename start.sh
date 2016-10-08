@@ -1,17 +1,20 @@
 #!/bin/bash
-Version=1.1
+Version=1.2
 VersionURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/Version.git
 UpdateURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/update.sh
 wget -q $VersionURL -N
 source $PWD/Version.git
 if [ $Version = $VersionGit ]; then
-	echo "[X-C4 - UPDATE] Votre systeme est à jour"
+	echo "[X-C4 - SYSTÈME:008] Votre systeme est à jour"
 else
-	echo "[X-C4 - UPDATE] Une mise à jour est disponible"
-	echo "[X-C4 - DOWNLOAD] Téléchargement du fichier update en cours"
+	echo "[X-C4 - SYSTÈME:010] Une mise à jour est disponible"
+	echo "[X-C4 - SYSTÈME:011] Téléchargement du fichier update en cours"
     wget -q $UpdateURL -N
-    bash $PWD/update.sh
+    echo "[X-C4 - SYSTÈME:013] Démarage du système upgrade"
+    source $PWD/update.sh
+    echo "[X-C4 - SYSTÈME:015] Suppression du systeme d'upgrade"
 fi
+rm $PWD/update.sh
 rm Version.git
 exit 0
 
