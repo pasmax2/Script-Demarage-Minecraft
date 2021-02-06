@@ -68,3 +68,4 @@ fi
 condition $var $ScreenName $Jar $Ram
 
 	screen -dmSL $ScreenName $0 'start' $Jar $Ram
+#
