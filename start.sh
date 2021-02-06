@@ -1,4 +1,5 @@
 #!/bin/sh
+#Auteur et codage par DJBlack
 Version="1.1"
 # ScreenName="mine.off"
 # Jar="craftbukkit-1.8-R0.1.jar"
