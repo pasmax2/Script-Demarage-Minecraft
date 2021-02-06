@@ -1,5 +1,5 @@
 #!/bin/bash
-#Auteur DJBlack
+#Auteur & Codeur DJBlack
 Version=1.3
 VersionURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/Version.git
 UpdateURL=https://raw.githubusercontent.com/pasmax2/Script-Demarage-Minecraft/Dev/update.sh
