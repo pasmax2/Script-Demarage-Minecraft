@@ -47,6 +47,7 @@ fi
 function condition()
 {
 	case $1 in
+
 	stop)
 		if ! screen -list | grep -q $2; then
 		  echo -e "\033[31mUn screen n'es pas actif vous devez le démaré avant!"
@@ -60,6 +61,7 @@ function condition()
     start)
         loop $3 $4
     ;;
+
 	esac
 		
 	if screen -list | grep -q $2; then
@@ -75,6 +77,7 @@ function loop()
 	BINDIR="$(dirname "\$(readlink -fn "\$0")")"
 	cd "$BINDIR"
 	while true
+
 	do
 	  java -Xincgc -Xmx"$2"G -jar $1
 	  echo "Si vous voulez arreter completement le processus de serveur maintenant, appuyez sur Ctrl + C avant le temps est ecoule! "
@@ -85,13 +88,15 @@ function loop()
 		sleep 1
 	  done
 	  echo "Redemarrage maintenant!"
+
 	done
 }
 if [ -z $1 ]; then
-var="false"
+	var="false"
 else
-var=$1
+	var=$1
 fi
+
 condition $var $ScreenName $Jar $Ram
 
 	screen -dmSL $ScreenName $0 'start' $Jar $Ram
